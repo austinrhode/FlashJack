@@ -8,8 +8,10 @@ body{
 
 #feedback {
     height: 10vh;
-    text-align: center;
     font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 main {

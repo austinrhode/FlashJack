@@ -54,10 +54,11 @@ function updateCards(){
 function giveFeedback(action){
     const current = hands[index];
     if(current.should === action){
-        feedback.innerText = "Correct";
+        feedback.children[0].innerText = "Correct";
         updateCards();
+        feedback.children[1].innerText = `${index + 1}/${hands.length}`
     }else{
-        feedback.innerText = `Incorrect should have ${current.should}`;
+        feedback.children[0].innerText = `Incorrect should have ${current.should}`;
     }
 }
 
