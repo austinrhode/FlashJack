@@ -49,6 +49,7 @@ main>div {
 #options button {
     height: 100%;
     font-size: 48px;
+    color: black;
 }
 
 @media (max-width: 1050px) {
@@ -68,5 +69,9 @@ main>div {
 
     #options button {
         font-size: 24px;
+    }
+
+    #main{
+        height: 70vh;
     }
 }
