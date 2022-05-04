@@ -435,7 +435,7 @@ const splits = [
       "upCard": 4,
       "card1": 4,
       "card2": 4,
-      "should": "split"
+      "should": "hit"
     },
     {
       "upCard": 5,
@@ -447,7 +447,7 @@ const splits = [
       "upCard": 6,
       "card1": 4,
       "card2": 4,
-      "should": "hit"
+      "should": "split"
     },
     {
       "upCard": 7,
