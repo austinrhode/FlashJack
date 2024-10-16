@@ -75,11 +75,13 @@ function updateCards(){
             card.style.transitionDuration = "1s";
             card.style.transform = "rotateY(0deg)";
         }
+
+        updateCard(card1, hands[index].card1)
+        updateCard(card2, hands[index].card2)
+        updateCard(dealer1, hands[index].upCard)
     }, 600);
 
-    updateCard(card1, hands[index].card1)
-    updateCard(card2, hands[index].card2)
-    updateCard(dealer1, hands[index].upCard)
+
 
 
     
