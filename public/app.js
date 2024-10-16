@@ -67,13 +67,18 @@ function updateCards(){
     index = (index + 1) % hands.length;
 
     for(let card of cardInners){
-        card.children[0].src = `./public/assets/back.png`;
-        card.children[1].src = `./public/assets/back.png`;
         card.style.transform = "rotateY(180deg)";
     }
 
+    setTimeout(() => {
+        for(let card of cardInners){
+            card.children[0].children[0].src = `./public/assets/back.png`;
+        } 
+    }, 200)
+
     setTimeout(function(){
         for(let card of cardInners){
+            card.children[0].children[0].src = `./public/assets/back.png`;
             card.style.transform = "rotateY(0deg)";
         }
 
