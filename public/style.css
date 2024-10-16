@@ -48,10 +48,46 @@ main>div {
     grid-gap: 10px;
 }
 
-#options button {
+#options div {
     height: 100%;
+    width: 100%;
+    position: relative;
+
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: top;
+    place-content: center;
+}
+
+#options button {
+    height: calc(100% - 8px);
+    width: 100%;
     font-size: 48px;
     color: black;
+    z-index: 2;
+
+    border: none;
+    padding: 10px;
+
+
+    background: hsl(340, 6%, 80%);
+    border-radius: 12px;
+
+}
+
+#options button:hover {
+    transform: translateY(-6px);
+}
+
+#options div .bg-btn {
+    background-color: rgb(3, 3, 3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background: hsl(0, 0%, 31%);
+    border-radius: 12px;
 }
 
 @media (max-width: 1050px) {
