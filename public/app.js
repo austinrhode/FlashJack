@@ -32,6 +32,23 @@ hit.addEventListener("click", (e) =>{
     giveFeedback("hit");    
 })
 
+document.addEventListener("keypress", (e) => {
+    switch(e.key.toLowerCase()) {
+        case "h":
+            giveFeedback("hit");
+            break;
+        case "d":
+            giveFeedback("double");
+            break;
+        case "s":
+            giveFeedback("split");
+            break;
+        case "j":
+            giveFeedback("stand");
+            break;
+    }
+})
+
 stand.addEventListener("click", (e) => {
     giveFeedback("stand");
 })
@@ -63,7 +80,7 @@ function giveFeedback(action){
 }
 
 function updateCard(card, value){
-    card.children[0].src = `assets/${value}.png`;
+    card.children[0].src = `./public/assets/${value}.png`;
 }
 
 //Fisher Yates Algorithm
