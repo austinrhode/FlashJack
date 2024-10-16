@@ -78,6 +78,7 @@ function updateCards(){
 
     setTimeout(function(){
         for(let card of cardInners){
+            card.children[0].children[0].src = `./public/assets/back.png`;
             card.style.transform = "rotateY(0deg)";
         }
 
