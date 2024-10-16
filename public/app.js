@@ -85,7 +85,7 @@ function updateCards(){
         updateCard(card1, hands[index].card1)
         updateCard(card2, hands[index].card2)
         updateCard(dealer1, hands[index].upCard)
-    }, 650);
+    }, 500);
 
 
 
