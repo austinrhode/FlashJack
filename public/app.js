@@ -7,12 +7,14 @@ const stand = document.getElementById("stand")
 const split = document.getElementById("split")
 const double = document.getElementById("double")
 
-const dealer = document.getElementById("dealer")
+const dealer1 = document.getElementById("dealer1")
 
 const card1 = document.getElementById("player1")
 const card2 = document.getElementById("player2")
 
 const feedback = document.getElementById("feedback")
+
+const cardInners = document.getElementsByClassName("flip-card-inner");
 
 let index = 0;
 
@@ -26,7 +28,7 @@ shuffle(hands);
 
 updateCard(card1, hands[index].card1)
 updateCard(card2, hands[index].card2)
-updateCard(dealer, hands[index].upCard)
+updateCard(dealer1, hands[index].upCard)
 
 hit.addEventListener("click", (e) =>{
     giveFeedback("hit");    
@@ -63,9 +65,24 @@ double.addEventListener("click", (e) => {
 
 function updateCards(){
     index = (index + 1) % hands.length;
+
+    for(let card of cardInners){
+        card.style.transform = "rotateY(180deg)";
+    }
+
+    setTimeout(function(){
+        for(let card of cardInners){
+            card.style.transitionDuration = "1s";
+            card.style.transform = "rotateY(0deg)";
+        }
+    }, 600);
+
     updateCard(card1, hands[index].card1)
     updateCard(card2, hands[index].card2)
-    updateCard(dealer, hands[index].upCard)
+    updateCard(dealer1, hands[index].upCard)
+
+
+    
 }
 
 function giveFeedback(action){
