@@ -74,7 +74,7 @@ function updateCards(){
         for(let card of cardInners){
             card.children[0].children[0].src = `./public/assets/back.png`;
         } 
-    }, 200)
+    }, 150)
 
     setTimeout(function(){
         for(let card of cardInners){
