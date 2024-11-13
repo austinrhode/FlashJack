@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "flashjack": "file:",
     "serve-favicon": "^2.5.0"
   }
 }
