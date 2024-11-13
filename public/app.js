@@ -70,6 +70,7 @@ function updateCards(){
 
     for(let card of cardInners){
         card.style.transform = "rotateY(180deg)";
+        card.children[0].children[0].src = `./public/assets/back.png`;
     }
 
     setTimeout(function(){
