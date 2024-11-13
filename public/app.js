@@ -66,7 +66,7 @@ double.addEventListener("click", (e) => {
 function updateCards(){
     index = (index + 1) % hands.length;
 
-    const FLIP_TIME_MS = 300;
+    const FLIP_TIME_MS = 150;
 
     for(let card of cardInners){
         card.style.transform = "rotateY(180deg)";
