@@ -66,15 +66,11 @@ double.addEventListener("click", (e) => {
 function updateCards(){
     index = (index + 1) % hands.length;
 
+    const FLIP_TIME_MS = 300;
+
     for(let card of cardInners){
         card.style.transform = "rotateY(180deg)";
     }
-
-    setTimeout(() => {
-        for(let card of cardInners){
-            card.children[0].children[0].src = `./public/assets/back.png`;
-        } 
-    }, 550)
 
     setTimeout(function(){
         for(let card of cardInners){
@@ -85,12 +81,8 @@ function updateCards(){
         updateCard(card1, hands[index].card1)
         updateCard(card2, hands[index].card2)
         updateCard(dealer1, hands[index].upCard)
-    }, 550);
+    }, FLIP_TIME_MS);
 
-
-
-
-    
 }
 
 function giveFeedback(action){
