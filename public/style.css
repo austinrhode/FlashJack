@@ -150,4 +150,9 @@ main>div.button-area {
     #main{
         height: 70vh;
     }
+
+    .card{
+        width: 100px;
+    }
+    
 }
